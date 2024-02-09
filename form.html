@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey Form</title>
+
+</head>
+<body>
+
+<h1 style="text-align:center;">Student Survey Form</h1>
+
+<form name="survey" style="text-align:center;">
+    
+    <!-- Taking all the required text fields -->
+
+    First Name: <input type="text" name="firstName" required><br><br>
+    Surname: <input type="text" name="lastName" required><br><br>
+    Street Address: <input type="text" name="streetAddress" required><br><br>
+    City: <input type="text" name="city" required><br><br>
+    State: <input type="text" name="state" required><br><br>
+    Zip: <input type="text" name="zip" required><br><br>
+    Phone Number: <input type="tel" name="phone" required><br><br>
+    Email: <input type="email" name="email" required><br><br>
+    Survey Date: <input type="date" name="date" required><br><br>
+
+    
+    <!-- Checkboxes which indicate what students like the most about the campus -->
+
+    What do you like the most about the Campus?<br>
+    <input type="checkbox" value="students">Students<br>
+    <input type="checkbox" value="location">Location<br>
+    <input type="checkbox" value="campus">Campus<br>
+    <input type="checkbox" value="atmosphere">Atmosphere<br>
+    <input type="checkbox" value="rooms">Dorm Rooms<br>
+    <input type="checkbox" value="sports">Sports<br><br>
+
+    <!-- Radio buttons which indicate how students became interested in the university -->
+
+    What led to your interest in the university?<br>
+    <input type="radio" value="friends">Friends<br>
+    <input type="radio" value="television">Television<br>
+    <input type="radio" value="internet">Internet<br>
+    <input type="radio" value="other">Other<br><br>
+
+    <!-- Dropdown list -->
+
+    How likely do you recommend this university?<br>
+    <select name="likelihood">
+        <option>Very Likely</option>
+        <option>Likely</option>
+        <option>Unlikely</option>
+    </select><br><br>
+
+    <!-- Additional text box -->
+
+    Raffle(10 comma-separated numbers 1-100) to get a chance to win free movie ticket:<br>
+    <input type="text" name="raffle" required><br><br>
+
+    Additional Comments:<br>
+    <textarea name="comments"></textarea><br><br>
+
+    <!-- Submit and Cancel buttons -->
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Cancel">
+</form>
+
+</body>
+</html>
