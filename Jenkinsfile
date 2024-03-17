@@ -6,7 +6,7 @@ pipeline {
         {
             steps {
                 script {
-                    git 'https://github.com/Sindhujakodaparthi/Form.git'
+                    git 'https://github.com/Sindhujakodaparthi/Form'
                 }
             }
         }
