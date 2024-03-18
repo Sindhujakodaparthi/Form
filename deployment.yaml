@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jenkins
+  name: studentsurveyform
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jenkins
+      app: studentsurveyform
   template:
     metadata:
       labels:
-        app: jenkins
+        app: studentsurveyform
     spec:
       containers:
-        - name: jenkins
+        - name: studentsurveyform
           image: sindhukodapa/studentsurveyform:latest
           ports:
             - containerPort: 8080
@@ -28,10 +28,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: jenkins
+  name: studentsurveyform
 spec:
   selector:
-    app: jenkins
+    app: studentsurveyform
   ports:
     - port: 8080
       targetPort: 8080
