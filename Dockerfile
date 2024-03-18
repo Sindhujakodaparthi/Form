@@ -18,5 +18,7 @@ RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 # Add Docker repository to sources.list
 RUN echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
 
+COPY form.html /var/www/html
+
 # Switch back to the Jenkins user
 USER jenkins
