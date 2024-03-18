@@ -16,7 +16,7 @@ spec:
         - name: studentsurveyform
           image: sindhukodapa/studentsurveyform:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           volumeMounts:
             - name: jenkins-home
               mountPath: /var/jenkins_home
@@ -33,6 +33,6 @@ spec:
   selector:
     app: studentsurveyform
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 80
+      targetPort: 80
   type: LoadBalancer
