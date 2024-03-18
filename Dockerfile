@@ -1,8 +1,5 @@
 # Use the official Jenkins LTS image as the base image
-FROM jenkins/jenkins:lts
-
-# Switch to root user
-USER root
+FROM --platform=linux/amd64 node:18-alpine as builder
 
 # Install prerequisites for Docker
 RUN apt-get update && \
@@ -20,5 +17,3 @@ RUN echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_releas
 
 COPY form.html /var/www/html
 
-# Switch back to the Jenkins user
-USER jenkins
